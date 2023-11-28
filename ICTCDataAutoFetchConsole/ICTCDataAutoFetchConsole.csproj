@@ -1,0 +1,1017 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4F7895D-8FD9-468A-952E-C8F3C44F31D9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICTCDataAutoFetchConsole</RootNamespace>
+    <AssemblyName>ICTCDataAutoFetchConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Definitions.cs" />
+    <Compile Include="IDBManager.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="MTBDBManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CoreMiddlewareService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ICTCServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MTBRemittanceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UATRemitServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SQLDBManager.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AbabilOwnerDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AbabilOwnerDetailResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AcceptRTPIDTPTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AccountBalanceOnDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AccountDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AccountDetailStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AccountStatementDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AccountStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AllDPLNAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AMLScoreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.AMLScoreVerifyServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.BEFTNTokeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.BkashAccValidationResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.BkashDoTxnResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.BkashKYCResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.BkashTxnQueryResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardCashWithdrawLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardChequeBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardChequeLeafResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardImageByFullPanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardInfoByAccNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardInfoByMaskPanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardLimitUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.cardPINResetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardStatusChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardSummaryByPAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardSupplementaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardToAccountFTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardToAccountFTResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardToAccountFTReversalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CardToAccountFTReversalResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CashByCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.cashByCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CBSChequeBookStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CBSChequeLeafResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CBSCustomerDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.changeCardPINResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.ChangePINResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CheckBeftnOutwardStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.checkBeftnOutwardStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CheckPVVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.checkPVVResponse11.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.createCardInOMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.createIDTPUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.createLoginSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.createRTPIDTPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CurrentBalanceByAccountNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CusLinkeAccInfoResposne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CustomerAccInfoByGroupIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CustomerAllAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.CustomerFullAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.DBTotalTransactionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.declineRTPIDTPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doBEFTNResResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.dobKashTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doCardStatusChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doGerdPolicyPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doIDTPTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doNagadResResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.DoNpsbTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doNpsbTxnResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doNSUStudentPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doOnlyRealTimeCardPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doOutwardDebitBEFTNTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doRealTimeCardPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doRocketTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doRTGSTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doRTPrepaidCardBillPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doSCMDTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doSDMCTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doSingleDr100CrTrxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doSwapTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doTcsCrCardPaymentUsdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.DoTopUpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doTopUpResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.DoTopupTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doTopUpTxnResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.doXtraGiftResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.EKYCAccChkOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.EKYCAccCreationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.EKYCChkOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.ExtensiveNameInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.FDRDProductInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.FundTransferEnqueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.FundTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GerdPolicyInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GerdPolicyPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetAccNoOfTrxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getAccountbalanceOnDateInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getAccountNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getAccStatementFrmDBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getAllXrtaTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getbKashAccKYCDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getbKashAccValidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getbKashTxnQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardAccountDetailOldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardAccountDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardAccountDetailResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardAccountLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardAccountLimitResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardByMaskedPANnClientIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCardCashWithdrawLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCardChequeBookByAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCardChequeLeafDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardDetailByPANnIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardDetailByPANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardInfoByEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardInfoByEmailResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardInfoByMobileNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardInfoByMobileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardNameByPANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardsByClientIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardSummaryByCIFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardSummaryByCIFResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardSummaryByPANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardSummaryByPANResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCardTransactionByPANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCardTxnLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCBSChequeBookStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCBSChequeLeafDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetCBSCustomerDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getCBSTotalTrnInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.GetClientAccountByPANnIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getClientIPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getFDRDProductInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getGerdPolicyInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getIDTPTrnStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getIDTPUserStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getIDTPUserTrnHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getIpAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getNpsbTxnStatusByRRNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getNsuStudentBalanceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getQrPosMarchentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getRTPReceivedListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getSelfRegistrationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getSupplimentCardsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getVCProductsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getXchgRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getXrtaTransactionByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getXrtaTransactionByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.getXtraMarchentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.get_client_ipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.get_timestampResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPFinalTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPRTPCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPRTPDeclineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPRTPReceivedListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPTranHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPTranStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPUserCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IDTPUserStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.InwardBEFTNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBAccountDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBankAccountDetailServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBankAllCustomerDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBankAllCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBankCustomerDetailServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.IslamiBCustomerDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.LastTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.MarchentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.MFSFundTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.MultiAccVerifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.MultipleCBSAccVerifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NagadTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NagadTxnStatusCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NpsbTxnStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NPSBTxnVerifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NPSBTxnVerifyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NsuStudentBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.NSUStudentTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OKWalletAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OkWalletCheckTranscationStatusServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OkWalletTransferMoneyServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OkWalletVerifyAccountServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OMSCardCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OnlineAccountStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OnlyRTCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.OutWardDebitRresponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.parseMobileNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.PrepaidCardPaymentTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.QrPosMerchantListResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.QRTranFTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.QRTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RealtimeAccountStmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RealtimeAccountStmtResponseDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RealTimeCardPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.rocketAccValidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RocketAccValidationResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RocketTransactionResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.rocketTxnInqueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RocketTxnInqueryResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.rocketTxnValidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RocketTxnValidationResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.RTPAcceptTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SDMCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SelfRegistrationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.sendEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SendEmailResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.sendSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SendSMSResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serAccountDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serAccountStatusResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serAllDPLNAccountInfoResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serBEFTNTokeResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCreateEkycAbabilAccNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCreateEkycAccNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCurrentBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCusLinkeAccInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCustomerAllAccountInfoByGroupIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCustomerAllAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serCustomerFullAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serDoBEFTNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serDoNagadTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serextensiveinfobymobilenoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serFundTransferEnqueryReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serFundTransferReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serGetCardBesicInfoByClientIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serGetCardImageByPanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serGetCardInfoByAccNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serGetCardInfoByMaskPanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serInwardBEFTNResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serIssueChequeBookResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serIssueDebitCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serMFSFundTransferReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serNagadTxnStatusCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serTCSCreateCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.serVerifyNagadNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SetPINResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.SwapTrxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSAccountStatementFrmDBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSCrCardPayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSCreateCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSDrCheIssueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSExchangeRateFetchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSRTGSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.TCSSDMCCorrectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.updateCardTxnLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.VarifyAccountNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.VerifyNagadNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.XtraGiftResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\ICTCDataAutoFetchConsole.CoreMiddlewareService.XtraGiftTxnDetailsResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\MTBWebService1.wsdl" />
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.AccountDetailStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.AccountStatementDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.CurrentBalanceByAccountNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.CustomerAllAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.CustomerFullAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.GetCardTransactionByPANResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.GetClientAccountByPANnIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.OnlineAccountStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.serAccountStatusResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.serCustomerAllAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.serCustomerFullAccountInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.serInwardBEFTNResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CoreMiddlewareService\NBLDataAutoFetchConsole.CoreMiddlewareService.serNagadTxnStatusCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.CashTxnDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.ConfirmTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.IcPayStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.OutstandingRemittanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.ReconcileResponses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCDataAutoFetchConsole.ICTCServiceClient.UnlockTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass1.wsdl" />
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.AccountEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.BEFTNPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.MobileWalletBeneficiaryValidationRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.MobileWalletBeneficiaryValidationResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.MobileWalletPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.OTCPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.PartyAccountAvailableBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.PaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.ReconciliationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\ICTCDataAutoFetchConsole.MTBRemittanceService.StatusEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\NBLDataAutoFetchConsole.MTBRemittanceService.MobileWalletBeneficiaryValidationRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\NBLDataAutoFetchConsole.MTBRemittanceService.MobileWalletBeneficiaryValidationResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\NBLDataAutoFetchConsole.MTBRemittanceService.PartyAccountAvailableBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MTBRemittanceService\Remit.wsdl" />
+    <None Include="Service References\UATRemitServiceReference\Remit.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CoreMiddlewareService\" />
+    <WCFMetadataStorage Include="Service References\ICTCServiceClient\" />
+    <WCFMetadataStorage Include="Service References\MTBRemittanceService\" />
+    <WCFMetadataStorage Include="Service References\UATRemitServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MTBRemittanceService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MTBRemittanceService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MTBRemittanceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MTBRemittanceService\Remit.disco" />
+    <None Include="Service References\CoreMiddlewareService\configuration91.svcinfo" />
+    <None Include="Service References\CoreMiddlewareService\configuration.svcinfo" />
+    <None Include="Service References\CoreMiddlewareService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ICTCServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\ICTCServiceClient\configuration.svcinfo" />
+    <None Include="Service References\ICTCServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UATRemitServiceReference\Remit.disco" />
+    <None Include="Service References\UATRemitServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UATRemitServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UATRemitServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
